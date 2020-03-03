@@ -10,6 +10,14 @@ public class InitList {
 		linkedList.insert(8);
 		linkedList.insert(9);
 		linkedList.print();
+		linkedList.insertAtBeginning(1);
+		linkedList.print();
+		linkedList.insertAtEnd(10);
+		linkedList.print();
+		linkedList.insertAtPosition(3, 3);
+		linkedList.print();
+		linkedList.deleteAt(3);
+		linkedList.print();
 		linkedList.reverse();
 		linkedList.print();
 	}
