@@ -18,7 +18,7 @@ public class InitList {
 		linkedList.print();
 		linkedList.deleteAt(3);
 		linkedList.print();
-		linkedList.reverse();
+		linkedList.reverse(true);
 		linkedList.print();
 	}
 

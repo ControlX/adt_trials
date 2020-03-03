@@ -96,21 +96,51 @@ public class LinkedList {
 			n = n.getNext();
 		}
 		System.out.println("\n");
+//		System.out.println("----Printing via recursive---\n");
+//		printRecursive(head);
+//		System.out.println("\n----Recursive end----\n");
 	}
 	
-	public void reverse() {
-		Node previous = null;
-		Node current = head;
-		Node next;
-		
-		while(current != null) {
-			next = current.getNext();
-			current.setNext(previous);
-			previous = current;
-			current = next;
+	public void printByRecursion(Node n){
+		if(n == null) {
+			return;
 		}
 		
-		head = previous;
+		System.out.print(n.getData() + " ");
+		printByRecursion(n.getNext());
+	}
+	
+	public void reverseByRecursion(Node previous, Node current, Node next) {
+		if(current == null) {
+			head = previous;
+			return;
+		}
+		
+		next = current.getNext();
+		current.setNext(previous);
+		previous = current;
+		current = next;
+		
+		reverseByRecursion(previous, current, next);
+	}
+	
+	public void reverse(boolean isRecursion) {
+		if(isRecursion) {
+			reverseByRecursion(null, head, null);
+		}
+		else {
+			Node previous = null;
+			Node current = head;
+			Node next;
+			
+			while(current != null) {
+				next = current.getNext();
+				current.setNext(previous);
+				previous = current;
+				current = next;
+			}
+			head = previous;
+		}
 	}
 	
 	public void deleteAt(int pos) {
