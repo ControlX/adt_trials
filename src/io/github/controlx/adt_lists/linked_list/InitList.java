@@ -21,6 +21,4 @@ public class InitList {
 		linkedList.reverse(true);
 		linkedList.print();
 	}
-
-	
 }
