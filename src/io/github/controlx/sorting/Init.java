@@ -31,5 +31,12 @@ public class Init {
 		 * 
 		 */
 		System.out.println(Arrays.toString(BubbleSort.sort(unsortedArray)) + " <---Bubble Sort");
+		
+		/**
+		 * Insertion Sort
+		 * 
+		 * 
+		 */
+		System.out.println(Arrays.toString(InsertionSort.sort(unsortedArray)) + " <---Insertion Sort");
 	}
 }

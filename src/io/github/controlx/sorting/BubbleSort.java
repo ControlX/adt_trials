@@ -1,7 +1,6 @@
 package io.github.controlx.sorting;
 
-public class BubbleSort {
-
+public class BubbleSort{
 	public static int[] sort(int[] a) {
 		for(int i=0; i<(a.length)-1-i; i++) {
 			int flag = 0;
